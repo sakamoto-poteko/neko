@@ -24,11 +24,11 @@ qmake
 make -j
 ```
 
-Or choose the easy way: open `neko.pro` with Qt Creator.
+Or choose the visual interactive way, open `neko.pro` with Qt Creator.
 
 ### Configuration
 
-You must have the dictionary files under ~/.neko/dict. You need to mkdir by yourself and download these dics:
+You must have the dictionary files under ~/.neko/dict. Create the directories by yourself and download these dics:
 
   - https://github.com/yanyiwu/cppjieba/blob/master/dict/jieba.dict.utf8 as `~/.neko/dict/dict.utf8`
   - https://github.com/yanyiwu/cppjieba/blob/master/dict/hmm_model.utf8 as `~/.neko/dict/hmm.utf8`
@@ -38,8 +38,8 @@ You must have the dictionary files under ~/.neko/dict. You need to mkdir by your
 
 ### ふみの (fumino)
 
-Fumino is the article metrics calculator (and the only subdir links to the Qt Library).
-Feed it with the path contains *.txt, it will give you metrics file.
+`Fumino` is the article metrics calculator (and the only subdir links to the Qt Library).
+Feed it with the path contains *.txt, it will give out the metrics file.
 
 __NOTE:__ Make sure your input files are in UTF-8, or fumino will throw a lot of NaNs on your face.
 
@@ -49,11 +49,11 @@ __NOTE:__ Make sure your input files are in UTF-8, or fumino will throw a lot of
 
 To combine multiple outputfile, just `cat` them together.
 
-__WARNING:__ Never use the output files cross the version. It's supposed to be broken.
+__WARNING:__ Never use the output files across versions. It's supposed to be broken.
 
 ### のぞみ (nozomi)
 
-Nozomi trains the ann.
+`Nozomi` trains the FFNN.
 
 ```
 ./nozomi metrics_this_author metrics_not_this_author trained_data_to_save
@@ -63,8 +63,8 @@ My test shows that ~20 articles will give some good results.
 
 ### ちせ (chise)
 
-Chise contains some test data and should be run after the training.
-To change the test dataset, you need to modify the code. It's hard coded.
+`Chise` contains some test data and should be run after the training.
+To modify the test dataset, you need to edit the code. The data is hard coded.
 
 ```
 ./chise trained_data_of_the_author
@@ -72,7 +72,7 @@ To change the test dataset, you need to modify the code. It's hard coded.
 
 ### MetricsReader
 
-MetricsReader reads the output file of fumino.
+`MetricsReader` reads the output file of `fumino`.
 
 ```
 ./metricsreader fumino_output
@@ -82,7 +82,7 @@ The last line is the average of data above.
 
 ### Jieba
 
-The library for cutting the sentence. For the sake of clarity I made it as an subdir proj. It doesn't compile by itself.
+The library for cutting the sentence. For the sake of clarity I made it as a subdir project. It won't produce binary though.
 
 ## License
 
@@ -109,7 +109,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-This project has the code from `CppJieba`, which is licensed under MIT.
+This project includes the code from `CppJieba`, which is licensed under MIT.
 
 ```
 The MIT License (MIT)
