@@ -36,7 +36,7 @@ You must have the dictionary files under ~/.neko/dict. Create the directories by
 
 ## Cats
 
-### ふみの (fumino)
+### 文乃 (fumino)
 
 `Fumino` is the article metrics calculator (and the only subdir links to the Qt Library).
 Feed it with the path contains *.txt, it will give out the metrics file.
@@ -51,7 +51,7 @@ To combine multiple outputfile, just `cat` them together.
 
 __WARNING:__ Never use the output files across versions. It's supposed to be broken.
 
-### のぞみ (nozomi)
+### 希 (nozomi)
 
 `Nozomi` trains the FFNN.
 
@@ -61,7 +61,7 @@ __WARNING:__ Never use the output files across versions. It's supposed to be bro
 
 My test shows that ~20 articles will give some good results.
 
-### ちせ (chise)
+### 千世 (chise)
 
 `Chise` contains some test data and should be run after the training.
 To modify the test dataset, you need to edit the code. The data is hard coded.
